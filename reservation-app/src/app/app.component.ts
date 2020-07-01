@@ -57,8 +57,10 @@ export class AppComponent implements OnInit{
         this.currentPrice
       )
     ).subscribe(
-      postResult => console.log(postResult)
-    );
+      postResult => {
+        console.log(postResult);
+        this.getReservations();
+    });
   }
 
   getReservations() {

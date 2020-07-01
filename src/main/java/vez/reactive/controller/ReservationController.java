@@ -10,15 +10,15 @@ import vez.reactive.service.ReservationService;
 
 
 @RestController
-@RequestMapping(ReservationResource.ROOM_V_1_RESERVATION)
+@RequestMapping(ReservationController.ROOM_V1_RESERVATION)
 @CrossOrigin
-public class ReservationResource {
-    public static final String ROOM_V_1_RESERVATION = "/room/v1/reservation";
+public class ReservationController {
+    public static final String ROOM_V1_RESERVATION = "/room/v1/reservation";
 
     private final ReservationService reservationService;
 
     @Autowired
-    public ReservationResource(ReservationService reservationService) {
+    public ReservationController(ReservationService reservationService) {
         this.reservationService = reservationService;
     }
 

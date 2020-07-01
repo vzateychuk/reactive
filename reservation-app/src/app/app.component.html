@@ -36,6 +36,19 @@
                   class="hidesm" src="/assets/images/intro_wedding.jpg"
                   alt="Intro Gallery Dining Sample Pictures">
           </div>
+          <!-- Show list of currect reservations -->
+          <div class="row" *ngIf="currentReservations">
+            <h1>Current Reservations</h1>
+            <div *ngFor="let reservation of currentReservations">
+              <ul>
+                <li><strong>Room #:</strong>{{reservation.roomNumber}}</li>
+                <li><strong>Price:</strong>{{reservation.price}}</li>
+                <li><strong>CheckIn:</strong>{{reservation.checkIn | date:"dd-MM-yyyy"}}</li>
+                <li><strong>CheckOut:</strong>{{reservation.checkOut | date}}</li>
+              </ul>
+              <hr/>
+            </div>
+          </div>
 
           <h1>Available rooms</h1>
 
